@@ -30,7 +30,19 @@ var saveUserInfo = function() {
 
     localStorage.setItem("userCurrent", JSON.stringify(userCurrent));
     localStorage.setItem("userGoals", JSON.stringify(userGoals));
+
+    document.querySelector("#userName").value = ""
+    document.querySelector("#userWeight").value = ""
+    document.querySelector("#userBodyfat").value = ""
+    document.querySelector("#weightGoal").value = ""
+    document.querySelector("#bodyfatGoal").value = ""
 }
 
+var loadUserCurrent = function() {
+    userCurrent = JSON.parse(localStorage.getItem("userCurrent"));
+}
 
+var loadUserGoals = function() {
+    userGoals = JSON.parse(localStorage.getItem("userGoals"));
+}
 saveBtn.addEventListener("click", saveUserInfo);
