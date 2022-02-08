@@ -1,17 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grou-project-1</title>
+    <title>Group-project-1</title>
     <link rel="stylesheet" href="./assets/css/app.css">
     <link rel="stylesheet" href="./assets/css/foundation.css">
     <!-- <link rel="stylesheet" href="./assets/css/foundation.min.css"> -->
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
-<body>
-    <h3>Save you stats to help track your progress</h3>
+
+<body class="body">
+    <header>
+        <h1>
+          <a href="/">[Name Here]</a>
+        </h1>
+        <nav>
+          <ul>
+            <li>
+              <a href="#bmi">BMI</a>
+            </li>
+            <li>
+              <a href="#introduction">Introduction</a>
+            </li>
+            <li>
+              <a href="#trainers">Trainers</a>
+            </li>
+            <li>
+              <a href="#nutrition">Nutrition</a>
+            </li>
+            <li>
+                <a href="schedule">Schedule</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+    <h3 class="trackHeader">Save your stats to help track your progress</h3>
     <p>What it your Name?</p>
     <input type="text" id="userName">
     <p>What is your current weight?</p>
@@ -25,6 +52,9 @@
     <p>What is your bodyfat % goal?</p>
     <input type="text" id="bodyfatGoal">
     <button id="saveGoals" class="Btn">Set your goals</button>
+
+    
+
     <script src="./assets/js/vendor/foundation.js"></script>
     <script src="./assets/js/vendor/foundation.min.js"></script>
     <script src="./assets/js/vendor/jquery.js"></script>
@@ -32,4 +62,5 @@
     <script src="./assets/js/app.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
+
 </html>
