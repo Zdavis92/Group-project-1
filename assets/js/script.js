@@ -52,4 +52,5 @@ var loadUserGoals = function() {
     userGoals = JSON.parse(localStorage.getItem("userGoals"));
 }
 saveCurrentBtn.addEventListener("click", saveUserCurrent);
+
 saveGoalsBtn.addEventListener("click", saveUserGoals);

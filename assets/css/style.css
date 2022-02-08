@@ -1,3 +1,4 @@
+
 * {
     box-sizing: border-box;
 }
@@ -57,6 +58,7 @@ header {
     border-style: outset;
     border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
     border-image: initial;
+
 }
 
 .body {
