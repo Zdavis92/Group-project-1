@@ -6,7 +6,7 @@ var searchForFood = function() {
     searchedFood = searchedFoodEl.value
     var oldResponse = document.querySelector("#responseEl");
     if (oldResponse) {
-        oldResponse.textContent = ""
+        oldResponse.remove();
     }
     if (!searchedFood) {
         return
@@ -22,8 +22,16 @@ var searchForFood = function() {
                 textEl.textContent = "Sorry nothing matched that discription. Please try agian."
                 bodyEl.appendChild(textEl);
              }else {
-                 searchedFoodEl.value = ""
-                 console.log(data)
+                searchedFoodEl.value = ""
+                var protein = data.foods[0].foodNutrients[0].value + data.foods[0].foodNutrients[0].unitName
+                var fat = data.foods[0].foodNutrients[1].value + data.foods[0].foodNutrients[1].unitName
+                var carbohydrate = data.foods[0].foodNutrients[2].value + data.foods[0].foodNutrients[2].unitName
+                var calories = data.foods[0].foodNutrients[3].value + " Calories"
+                var servingSize = data.foods[0].servingSize + data.foods[0].servingSizeUnit
+                var textEl = document.createElement("p")
+                textEl.setAttribute("id", "responseEl");
+                textEl.textContent = searchedFood + " has " + protein + " of protein, " + fat + " of fat, " + carbohydrate + " of carbohydrates, and " + calories + " for a " + servingSize + " serving size."
+                bodyEl.appendChild(textEl); 
              }
             })
         })
