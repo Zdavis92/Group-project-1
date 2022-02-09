@@ -1,6 +1,6 @@
 var searchedFoodEl = document.querySelector("#food");
 var buttonEl = document.querySelector("#search");
-var bodyEl = document.querySelector("#body");
+var nutritionEl = document.querySelector(".nutritionOne");
 var searchField = document.querySelector("#submitContainer");
 
 var searchForFood = function(event) {
@@ -33,7 +33,7 @@ var searchForFood = function(event) {
                 var textEl = document.createElement("p")
                 textEl.setAttribute("id", "responseEl");
                 textEl.textContent = searchedFood + " has " + protein + " of protein, " + fat + " of fat, " + carbohydrate + " of carbohydrates, and " + calories + " for a " + servingSize + " serving size."
-                bodyEl.appendChild(textEl); 
+                nutritionEl.appendChild(textEl); 
              }
             })
         })
