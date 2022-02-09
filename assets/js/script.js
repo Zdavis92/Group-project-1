@@ -11,7 +11,7 @@ var userBodyfatGoalInput = document.querySelector("#bodyfatGoal");
 var saveCurrentBtn = document.querySelector("#saveBtn");
 var saveGoalsBtn = document.querySelector("#saveGoals");
 var currentCon = {
-    icon: "",
+    id: "",
     temp: "",
     wind: "",
     humidity: "",
@@ -89,7 +89,7 @@ var getWeatherData = function(lat, lon) {
     fetch(apiLatLon).then(function(response) {
         response.json().then(function(data) {
             console.log(data);
-            currentCon.icon = data.current.weather[0].icon
+            currentCon.id = data.current.weather[0].id
             currentCon.temp = data.current.temp
             currentCon.wind = data.current.wind_speed
             currentCon.humidity = data.current.humidity
@@ -118,6 +118,11 @@ var displayWeather = function() {
     currentCityEl.appendChild(currentCityWindEl)
     currentCityEl.appendChild(currentCityHumidityEl)
     currentCityEl.appendChild(currentCityUvEl)
+    if (parseInt(currentCon.id) > 799) {
+        var runWeather = document.createElement("p")
+        runWeather.textContent = "Look like good weather for a run!"
+        currentCityEl.appendChild(runWeather);
+    }
 }
 
 // saveCurrentBtn.addEventListener("click", saveUserCurrent);
