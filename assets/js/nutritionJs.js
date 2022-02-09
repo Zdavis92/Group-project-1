@@ -1,8 +1,10 @@
 var searchedFoodEl = document.querySelector("#food");
 var buttonEl = document.querySelector("#search");
 var bodyEl = document.querySelector("#body");
+var searchField = document.querySelector("#submitContainer");
 
-var searchForFood = function() {
+var searchForFood = function(event) {
+    event.preventDefault();
     searchedFood = searchedFoodEl.value
     var oldResponse = document.querySelector("#responseEl");
     if (oldResponse) {
@@ -38,4 +40,4 @@ var searchForFood = function() {
     }
 }
 
-buttonEl.addEventListener("click", searchForFood);
+searchField.addEventListener("submit", searchForFood);
