@@ -100,6 +100,7 @@ header {
   }
   
   .hero-cta h2 {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-style: sans-serif;
     font-size: 75px;
     color: #fce138;
@@ -147,78 +148,110 @@ header {
 .statMain {
     align-content: space-between;
     display: flex;
+    border-radius: 20px;
     
 }
 
 .statsTest {
-    border: 5px solid purple;
+    border: 5px solid black;
     padding: 10px;
     margin: 10px;
     font-size: 20px;
     text-align: center; 
-    height: 500px;
+    height: 600px;
     width: 400px;
-    background-color: yellow;
+    background-image:url(https://images.fineartamerica.com/images-medium-large/gold-background-tom-gowanlock.jpg);
     flex: auto;
     vertical-align: top;
+    border-radius: 20px;
 }
 
 .statsTest h2 {
-    border: 5px solid purple;
+    border: 5px solid black;
     border-style: double;
-    background-color: lightyellow;
+    background: rgba(255, 255, 255, 0.5);
     padding: 12px;
     margin: 12px;
     font-size: 40px;
     text-align: center; 
     vertical-align: top;
+    border-radius: 20px;
+}
+
+.statsTest p {
+  border: 5px solid black;
+  border-style: double;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 12px;
+  margin: 12px;
+  font-size: 20px;
+  text-align: center; 
+  vertical-align: top;
+  border-radius: 20px;
 }
 
 .btnStat {
     padding: 10px;
     border: 2px solid #000000;
+    background: rgba(255, 255, 255, 0.8);
     vertical-align: text-bottom;
-    margin-top: 200px;
+    justify-content: flex-end;
+    vertical-align: bottom;
+    margin:30px;
+    border-radius: 20px;
 }
 
 .bmi {
-    border: 5px solid rgb(17, 0, 255);
-    background-color: aquamarine;
+    border: 5px solid rgb(0, 0, 0);
+    background-image: url(https://st.depositphotos.com/2605379/4558/i/950/depositphotos_45581051-stock-photo-metal-texture.jpg);
     padding: 20px;
     margin: 10px;
     font-size: 10px;
     text-align: center; 
     box-sizing: border-box;
-    height: 500px;
+    height: 600px;
     width: 400px;
     flex: auto;
+    border-radius: 20px;
 }
 
 .bmi h2 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 30px;
-    border: 5px solid blue;
-    background-color: lightblue;
-    padding: 20px
+    border: 5px solid black;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    border-radius: 20px;
 }
 
 .bmi p {
-    border: 3px solid darkblue;
-    background-color: #fff;
-    font-size: 30px;
+    border: 3px solid black;
+    background: rgba(255, 255, 255, 0.5);
+    font-size: 20px;
     margin: 30px;
     text-align: left;
     padding-top: 16px;
     padding-bottom: 16px;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 20px;
 }
 
 .bmi h6 {
-    border: 3px solid darkblue;
-    background-color: #fff;
-    font-size: 30px;
+    border: 3px solid black;
+    background: rgba(255, 255, 255, 0.5);
+    font-size: 20px;
     margin: 30px;
     text-align: right;
     padding-top: 16px;
     padding-bottom: 16px;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 20px;
 }
 /* End of Stats & BMI */
 
@@ -240,13 +273,37 @@ header {
     margin: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
-    height: 350px;
+    height: 400px;
 }
 
 .trainerMain h1 {
     padding: 10px;
     margin-left: 20px;
 }
+
+.trainerImages {
+    display: inline-block;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    height: auto;
+    width: auto;
+}
+
+#trainerScroll {
+    background-color: #333;
+    overflow: auto;
+    white-space: nowrap;
+    height: auto;
+    width: auto;
+}
+
+.trainerImages:hover {
+    background-color: #777;
+}
+/* End of Trainers */
+
+/* Start of Nutrition */
   
 .nutritionOne {
     border: 5px solid rgb(1, 1, 51);
@@ -265,7 +322,7 @@ header {
     text-align: center;
     margin-top: 90px;
 }
-/* End of Trainers */
+/* End of Nutrition */
 
 /* Start of Footer */
 footer {
