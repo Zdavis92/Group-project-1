@@ -98,13 +98,16 @@
     </section>
   </section>
 
-  <section>
-    <section id="introduction">
-      <div class="introduction">
-       <p>First API</p>
-      </div>
-    </section>
-  </section>
+      <section>
+        <section>
+          <div class="introduction">
+            <h1>Enter Your Current City</h1>
+              <input type="text" id="currentCity">
+              <button id="checkWeather">Check the weather</button>
+              <div id="currentWeather"></div>
+          </div>
+        </section>
+      </section>
 
   <section>
     <section>
@@ -136,13 +139,17 @@
   </section>
 
   <section>
-    <section id="nutrition">
+    <section>
       <div class="nutritionOne">
         <h1> Nutritional Support </h1>
         <h3> Nutrition API </h3>
+        <form id="submitContainer">
+          <h4>Enter a Food Item for it's nutritional information</h4>
+          <input id="food">
+          <button id="search" type="submit">search</button>
+      </form>
       </div>
     </section>
-  </section>
   <!-- <h3 class="trackHeader">Save your stats to help track your progress</h3>
     <p>What it your Name?</p>
     <input type="text" id="userName">
@@ -184,13 +191,13 @@
     </div>
   </footer>
 
-
-  <script src="./assets/js/vendor/foundation.js"></script>
-  <script src="./assets/js/vendor/foundation.min.js"></script>
-  <script src="./assets/js/vendor/jquery.js"></script>
-  <script src="./assets/js/vendor/what-input.js"></script>
-  <script src="./assets/js/app.js"></script>
-  <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/vendor/foundation.js"></script>
+    <script src="./assets/js/vendor/foundation.min.js"></script>
+    <script src="./assets/js/vendor/jquery.js"></script>
+    <script src="./assets/js/vendor/what-input.js"></script>
+    <script src="./assets/js/app.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/nutritionJs.js"></script>
 </body>
 
 </html>
