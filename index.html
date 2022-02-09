@@ -76,6 +76,7 @@
           <div class="statsTest" >
             <h2> Save Your Stats!</h2>
             <p> Help Track Your Progress Today!</p>
+            <a href="./schedule.html">Lets create a workout schedule for you!</a>
             <button type="submit" class="btnStat">
               Get running!
             </button>
@@ -93,7 +94,10 @@
         <section>
           <div class="introduction">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/5iHQDUvR_vc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <h1> 1st API </h1>
+            <h1>Enter Your Current City</h1>
+              <input type="text" id="currentCity">
+              <button id="checkWeather">Check the weather</button>
+              <div id="currentWeather"></div>
           </div>
         </section>
       </section>
@@ -111,6 +115,11 @@
           <div class="nutritionOne">
             <h1> Nutritional Support </h1>
             <h3> Nutrition API </h3>
+            <form id="submitContainer">
+              <h4>Enter a Food Item for it's nutritional information</h4>
+              <input id="food">
+              <button id="search" type="submit">search</button>
+          </form>
           </div>
         </section>
       </section>
@@ -162,6 +171,7 @@
     <script src="./assets/js/vendor/what-input.js"></script>
     <script src="./assets/js/app.js"></script>
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/nutritionJs.js"></script>
 </body>
 
 </html>
