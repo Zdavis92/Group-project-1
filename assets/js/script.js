@@ -1,3 +1,4 @@
+// Setting variables to get HTML elements.
 var lat = ""
 var lon = ""
 var cityName = ""
@@ -10,6 +11,8 @@ var userWeightGoalInput = document.querySelector("#weightGoal");
 var userBodyfatGoalInput = document.querySelector("#bodyfatGoal");
 var saveCurrentBtn = document.querySelector("#saveBtn");
 var saveGoalsBtn = document.querySelector("#saveGoals");
+
+// Created JS objects to save data
 var currentCon = {
     id: "",
     temp: "",
@@ -28,7 +31,7 @@ var userGoals = {
     weightGoal: "",
     bodyfatGoal: "",
 }
-
+// Get input values of the users info and saves them in local storage
 var saveUserCurrent = function() {
     var userName = document.querySelector("#userName").value
     var userWeight = document.querySelector("#userWeight").value
@@ -44,7 +47,7 @@ var saveUserCurrent = function() {
     document.querySelector("#userWeight").value = ""
     document.querySelector("#userBodyfat").value = ""
 }
-
+// get input values of the users goals and saves them in local storage
 var saveUserGoals = function() {
     var userWeightGoal = document.querySelector("#weightGoal").value
     var userBodyfatGoal = document.querySelector("#bodyfatGoal").value
@@ -57,11 +60,12 @@ var saveUserGoals = function() {
     document.querySelector("#weightGoal").value = ""
     document.querySelector("#bodyfatGoal").value = ""
 }
-
+// Loads the users info
 var loadUserCurrent = function() {
     userCurrent = JSON.parse(localStorage.getItem("userCurrent"));
 }
 
+// Loads the users goals
 var loadUserGoals = function() {
     userGoals = JSON.parse(localStorage.getItem("userGoals"));
 }
