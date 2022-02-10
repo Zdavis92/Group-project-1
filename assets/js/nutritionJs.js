@@ -1,8 +1,10 @@
+// Setting variables to get hmtl elements
 var searchedFoodEl = document.querySelector("#food");
 var buttonEl = document.querySelector("#search");
 var nutritionEl = document.querySelector(".nutritionOne");
 var searchField = document.querySelector("#submitContainer");
 
+// Gets user input and add to api fetch. If a search result is found then it adds it to the page.
 var searchForFood = function(event) {
     event.preventDefault();
     searchedFood = searchedFoodEl.value
@@ -39,5 +41,5 @@ var searchForFood = function(event) {
         })
     }
 }
-
+// Listens the the user to enter a query then calls the search function.
 searchField.addEventListener("submit", searchForFood);
