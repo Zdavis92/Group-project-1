@@ -1,0 +1,137 @@
+<<<<<<< HEAD
+=======
+// Setting variables to get HTML elements.
+var lat = ""
+var lon = ""
+var cityName = ""
+var cityNameEl = document.querySelector("#currentCity");
+var checkWeatherBtn = document.querySelector("#checkWeather");
+var userNameInput = document.querySelector("#userName");
+var userWeightInput = document.querySelector("#userWeight");
+var userBodyfatInput = document.querySelector("#userBodyfat");
+var userWeightGoalInput = document.querySelector("#weightGoal");
+var userBodyfatGoalInput = document.querySelector("#bodyfatGoal");
+var saveCurrentBtn = document.querySelector("#saveBtn");
+var saveGoalsBtn = document.querySelector("#saveGoals");
+
+// Created JS objects to save data
+var currentCon = {
+    id: "",
+    temp: "",
+    wind: "",
+    humidity: "",
+    UVIndex: ""
+}
+
+var userCurrent = {
+    name: "",
+    weight: "",
+    bodyfat: "",
+}
+
+var userGoals = {
+    weightGoal: "",
+    bodyfatGoal: "",
+}
+// Get input values of the users info and saves them in local storage
+var saveUserCurrent = function() {
+    var userName = document.querySelector("#userName").value
+    var userWeight = document.querySelector("#userWeight").value
+    var userBodyfat = document.querySelector("#userBodyfat").value
+
+    userCurrent.name = userName
+    userCurrent.weight = userWeight
+    userCurrent.bodyfat = userBodyfat
+
+    localStorage.setItem("userCurrent", JSON.stringify(userCurrent));
+
+    document.querySelector("#userName").value = ""
+    document.querySelector("#userWeight").value = ""
+    document.querySelector("#userBodyfat").value = ""
+}
+// get input values of the users goals and saves them in local storage
+var saveUserGoals = function() {
+    var userWeightGoal = document.querySelector("#weightGoal").value
+    var userBodyfatGoal = document.querySelector("#bodyfatGoal").value
+
+    userGoals.weightGoal = userWeightGoal
+    userGoals.bodyfatGoal = userBodyfatGoal
+
+    localStorage.setItem("userGoals", JSON.stringify(userGoals));
+
+    document.querySelector("#weightGoal").value = ""
+    document.querySelector("#bodyfatGoal").value = ""
+}
+// Loads the users info
+var loadUserCurrent = function() {
+    userCurrent = JSON.parse(localStorage.getItem("userCurrent"));
+}
+
+// Loads the users goals
+var loadUserGoals = function() {
+    userGoals = JSON.parse(localStorage.getItem("userGoals"));
+}
+
+// function fetchs api to get lat and lon of the searched city and calls function to get the weather data
+var getCityLatLon = function(cityName) {
+    cityName = cityNameEl.value
+    if (cityName) {
+        var apiCity = "https://api.openweathermap.org/geo/1.0/direct?q=" + cityName + "&limit=1&appid=7c0bd0cf3800dbf86808087317e3514f"
+        fetch(apiCity).then(function(response) {
+            response.json().then(function(data){
+                lat = data[0].lat
+                lon = data[0].lon
+                getWeatherData(lat, lon);
+            })
+        })
+    }
+    else {
+        alert("Enter a City Name")
+    }
+}
+// calls the api to weather data for current and forecast and saves the data in objects. Calls function to display the data
+var getWeatherData = function(lat, lon) {
+    var apiLatLon = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&units=imperial&exclude=minutely,hourly,alerts&appid=7c0bd0cf3800dbf86808087317e3514f"
+    fetch(apiLatLon).then(function(response) {
+        response.json().then(function(data) {
+            console.log(data);
+            currentCon.id = data.current.weather[0].id
+            currentCon.temp = data.current.temp
+            currentCon.wind = data.current.wind_speed
+            currentCon.humidity = data.current.humidity
+            currentCon.UVIndex = data.current.uvi
+            displayWeather();
+        })
+    })
+}
+
+// function dynamicly creates elements and added weather data to them. Then displays them on the screen.
+var displayWeather = function() {
+    var currentCityEl = document.querySelector("#currentWeather");
+    var currentCityUvEl = document.createElement("p");
+    currentCityEl.innerHTML = ""
+    var currentCityNameEl = document.createElement("p");
+    var currentCityTempEl = document.createElement("p");
+    var currentCityWindEl = document.createElement("p");
+    var currentCityHumidityEl = document.createElement("p");
+    currentCityNameEl.textContent = cityName
+    currentCityTempEl.textContent = "Temp: " + currentCon.temp + "°F";
+    currentCityWindEl.textContent = "Wind: " + currentCon.wind + "MPH";
+    currentCityHumidityEl.textContent = "Humidity: " + currentCon.humidity + "%";
+    currentCityUvEl.textContent = "UV Index: " + currentCon.UVIndex;
+    currentCityEl.appendChild(currentCityNameEl)
+    currentCityEl.appendChild(currentCityTempEl)
+    currentCityEl.appendChild(currentCityWindEl)
+    currentCityEl.appendChild(currentCityHumidityEl)
+    currentCityEl.appendChild(currentCityUvEl)
+    if (parseInt(currentCon.id) > 799) {
+        var runWeather = document.createElement("p")
+        runWeather.textContent = "Look like good weather for a run!"
+        currentCityEl.appendChild(runWeather);
+    }
+}
+
+// saveCurrentBtn.addEventListener("click", saveUserCurrent);
+checkWeatherBtn.addEventListener("click", getCityLatLon);
+// saveGoalsBtn.addEventListener("click", saveUserGoals);
+>>>>>>> d0c20b1edc1c7445a34760b13b35a0cc22ec4afd

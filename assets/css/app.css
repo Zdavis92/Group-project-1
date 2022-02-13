@@ -1,0 +1,401 @@
+
+* {
+    box-sizing: border-box;
+}
+
+header {
+    padding: 20px 0px;
+    background-color: #000000;
+    display: flex;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }
+
+  header h1 {
+    font-weight: bold;
+    font-size: 36px;
+    color: #fce138;
+    margin: 0;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+  header a {
+    text-decoration: none;
+    color: #ffd700;
+  }
+
+  header nav {
+    margin: 7px 0;
+  }
+
+  header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+  }
+
+  header nav ul li a {
+    padding: 10px 50px;
+    margin: 10px;
+    font-weight: lighter;
+    font-size: 1.55vw;
+    text-shadow: 0 0 10px rgba(255, 241, 44, 0.5);
+    border-radius: 30px;
+    border-color: #ffd700;
+    border-style: double;
+  }
+
+  header nav ul li a:hover {
+    background: #fce138;
+    color: #000000;
+    border-radius: 60px;
+    text-shadow: none;
+  }
+
+.Btn {
+    border-width: 2px;
+    border-style: outset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+
+}
+
+.logo {
+  border: 5px solid black;
+  background-image:linear-gradient(black, gold);
+  border-radius: 100px;
+  height: 50px;
+  width: 50px;
+  justify-content: left;
+}
+
+.body {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 22px;
+    -webkit-font-smoothing: antialiased;
+    vertical-align: baseline;
+    background-color: lightgrey;
+}
+
+/* Hero Style Start */
+.hero {
+    background-image: url(https://www.muscleandfitness.com/wp-content/uploads/2019/07/Hands-Clapping-Chaulk-Kettlebell.jpg?quality=86&strip=all);
+    padding: 60px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    background-attachment: fixed;
+    background-position: 100%;
+    font-size: 17px;
+  }
+  
+  .hero-cta {
+    width: 80%;
+    text-align: center;
+    margin: 5%;
+    color: #fff;
+    font-size: 22px;
+    padding: 20px;
+  }
+  
+  .hero-cta h2 {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: sans-serif;
+    font-size: 75px;
+    color: #fce138;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 50px;
+  }
+  
+  .hero-form {
+    border: 3px solid #000000;
+    background-color:rgba(255, 255, 255, 0.8);
+    padding: 50px;
+    color: #000000;
+    width: 700px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+  }
+  
+  .hero-form button:hover {
+    background: #000000;
+    color: #ffffff;
+    border-radius: 60px;
+    text-shadow: none;
+    padding: 10px;
+  }
+  
+  .hero-form p {
+    margin: 5px 0 15px 0;
+    text-align: center;
+  }
+  
+  .hero-form h3 {
+    font-size: 50px;
+    margin: 0;
+    text-align: center;
+  }
+
+  .btnForm {
+    text-align: center;
+    margin-top: 20px;
+    padding-bottom: 20px;
+  }
+/* End of Header */
+
+/* Start of Stats & BMI */
+.statMain {
+    align-content: space-between;
+    display: flex;
+    border-radius: 20px;
+    
+}
+
+.statsTest {
+    border: 5px solid black;
+    padding: 10px;
+    margin: 10px;
+    font-size: 20px;
+    text-align: center; 
+    height: 600px;
+    width: 400px;
+    background-image:url(https://images.unsplash.com/photo-1545873509-33e944ca7655?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Z29sZCUyMGJhY2tncm91bmR8ZW58MHx8MHx8&w=1000&q=80);
+    flex: auto;
+    vertical-align: top;
+    border-radius: 20px;
+}
+
+.statsTest h2 {
+    border: 5px solid black;
+    border-style: double;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 12px;
+    margin: 12px;
+    font-size: 40px;
+    text-align: center; 
+    vertical-align: top;
+    border-radius: 20px;
+}
+
+.statsTest p {
+  border: 5px solid black;
+  border-style: double;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 12px;
+  margin: 12px;
+  font-size: 20px;
+  text-align: center; 
+  vertical-align: top;
+  border-radius: 20px;
+}
+
+.btnStat {
+    padding: 10px;
+    border: 2px solid #000000;
+    background: rgba(255, 255, 255, 0.8);
+    vertical-align: text-bottom;
+    justify-content: flex-end;
+    vertical-align: bottom;
+    margin:30px;
+    border-radius: 20px;
+}
+
+.bmi {
+    border: 5px solid rgb(0, 0, 0);
+    background-image: url(https://st.depositphotos.com/2605379/4558/i/950/depositphotos_45581051-stock-photo-metal-texture.jpg);
+    padding: 20px;
+    margin: 10px;
+    font-size: 10px;
+    text-align: center; 
+    box-sizing: border-box;
+    height: 600px;
+    width: 400px;
+    flex: auto;
+    border-radius: 20px;
+}
+
+.bmi h2 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+    border: 5px solid black;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.bmi p {
+    border: 3px solid black;
+    background: rgba(255, 255, 255, 0.5);
+    font-size: 20px;
+    margin: 30px;
+    text-align: left;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 20px;
+}
+
+.bmi h6 {
+    border: 3px solid black;
+    background: rgba(255, 255, 255, 0.5);
+    font-size: 20px;
+    margin: 30px;
+    text-align: right;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 20px;
+}
+/* End of Stats & BMI */
+
+/* Start of API 1 */
+.introduction {
+    border: 5px solid red;
+    background-color: lightcoral;
+    padding: 20px;
+    height: 500px;
+    text-align: center;
+    margin: 10px;
+}
+
+/* End of API 1 */
+
+/* Start of Trainers */
+.trainerMain {
+    border: 5px solid darkslategrey;
+    margin: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 400px;
+}
+
+.trainerMain h1 {
+    padding: 10px;
+    margin-left: 20px;
+}
+
+.trainerImages {
+    display: inline-block;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    height: auto;
+    width: auto;
+}
+
+#trainerScroll {
+    background-color: #333;
+    overflow: auto;
+    white-space: nowrap;
+    height: auto;
+    width: auto;
+}
+
+.trainerImages:hover {
+    background-color: #777;
+}
+/* End of Trainers */
+
+/* Start of Nutrition */
+  
+.nutritionOne {
+    border: 5px solid rgb(1, 1, 51);
+    background-color: lightpink;
+    margin: 10px;
+    height: 500px;
+}
+
+.nutritionOne h1 {
+    border: 5px solid rgb(1, 1, 51);
+    padding: 20px;
+    text-align: center;
+}
+
+.nutritionOne h3 {
+    text-align: center;
+    margin-top: 90px;
+}
+/* End of Nutrition */
+
+/* Start of Footer */
+footer {
+    padding: 20px 0px;
+    background-color: #000000;
+    display: flex;
+    justify-content:flex-start;
+    flex-wrap: wrap;
+    top: 0;
+  }
+
+  footer h1 {
+    font-weight: bold;
+    font-size: 36px;
+    color: #fce138;
+    margin-right: 100px;
+    margin-left: 40px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+  footer a {
+    text-decoration: none;
+    color: #ffd700;
+  }
+
+  footer nav {
+    margin: 12px;
+  }
+
+  footer nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+  }
+
+  footer nav ul li a {
+    padding: 10px 20px;
+    margin: 10px;
+    font-weight: lighter;
+    font-size: 0.85vw;
+    text-shadow: 0 0 10px rgba(255, 241, 44, 0.5);
+    border-radius: 30px;
+    border-color: #ffd700;
+    border-style: double;
+  }
+
+  footer nav ul li a:hover {
+    background: #fce138;
+    color: #000000;
+    border-radius: 60px;
+    text-shadow: none;
+  }
+
+  footer div {
+    font-size: 40px;
+  }
+
+  .fa {
+    margin-left: 40px;
+    padding: 10px;
+    width: 60px;
+    text-align: center;
+    text-decoration: none;
+    font-size: larger;
+  }
