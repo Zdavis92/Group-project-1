@@ -1,3 +1,4 @@
+// Getting HTML elements and saving them as variables
 var lat = ""
 var lon = ""
 var cityName = ""
@@ -10,6 +11,7 @@ var userWeightGoalInput = document.querySelector("#weightGoal");
 var userBodyfatGoalInput = document.querySelector("#bodyfatGoal");
 var saveCurrentBtn = document.querySelector("#saveBtn");
 var saveGoalsBtn = document.querySelector("#saveGoals");
+// Js objects to store info
 var currentCon = {
     id: "",
     temp: "",
@@ -29,10 +31,11 @@ var userGoals = {
     bodyfatGoal: "",
 }
 
+// gets the input values of the current user stats and adds them to local storage.
 var saveUserCurrent = function() {
-    var userName = document.querySelector("#userName").value
-    var userWeight = document.querySelector("#userWeight").value
-    var userBodyfat = document.querySelector("#userBodyfat").value
+    var userName = userNameInput.value
+    var userWeight = userWeightInput.value
+    var userBodyfat = userBodyfatInput.value
 
     userCurrent.name = userName
     userCurrent.weight = userWeight
@@ -40,28 +43,31 @@ var saveUserCurrent = function() {
 
     localStorage.setItem("userCurrent", JSON.stringify(userCurrent));
 
-    document.querySelector("#userName").value = ""
-    document.querySelector("#userWeight").value = ""
-    document.querySelector("#userBodyfat").value = ""
+    userBodyfatInput.value = ""
+    userWeightInput.value = ""
+    userBodyfatInput.value = ""
 }
 
+// get the input values of the users goals and adds them to local storage
 var saveUserGoals = function() {
-    var userWeightGoal = document.querySelector("#weightGoal").value
-    var userBodyfatGoal = document.querySelector("#bodyfatGoal").value
+    var userWeightGoal = userWeightGoalInput.value
+    var userBodyfatGoal = userBodyfatGoalInput.value
 
     userGoals.weightGoal = userWeightGoal
     userGoals.bodyfatGoal = userBodyfatGoal
 
     localStorage.setItem("userGoals", JSON.stringify(userGoals));
 
-    document.querySelector("#weightGoal").value = ""
-    document.querySelector("#bodyfatGoal").value = ""
+    userWeightGoalInput.value = ""
+    userBodyfatGoalInput.value = ""
 }
 
+// gets the users current stats from local storage
 var loadUserCurrent = function() {
     userCurrent = JSON.parse(localStorage.getItem("userCurrent"));
 }
 
+// gets the users goals form local storage
 var loadUserGoals = function() {
     userGoals = JSON.parse(localStorage.getItem("userGoals"));
 }
@@ -83,6 +89,7 @@ var getCityLatLon = function(cityName) {
         alert("Enter a City Name")
     }
 }
+
 // calls the api to weather data for current and forecast and saves the data in objects. Calls function to display the data
 var getWeatherData = function(lat, lon) {
     var apiLatLon = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&units=imperial&exclude=minutely,hourly,alerts&appid=7c0bd0cf3800dbf86808087317e3514f"
