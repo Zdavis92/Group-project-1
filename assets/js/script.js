@@ -33,9 +33,9 @@ var userGoals = {
 }
 // Get input values of the users info and saves them in local storage
 var saveUserCurrent = function() {
-    var userName = document.querySelector("#userName").value
-    var userWeight = document.querySelector("#userWeight").value
-    var userBodyfat = document.querySelector("#userBodyfat").value
+    var userName = userNameInput.value
+    var userWeight = userWeightInput.value
+    var userBodyfat = userBodyfatInput.value
 
     userCurrent.name = userName
     userCurrent.weight = userWeight
@@ -43,22 +43,22 @@ var saveUserCurrent = function() {
 
     localStorage.setItem("userCurrent", JSON.stringify(userCurrent));
 
-    document.querySelector("#userName").value = ""
-    document.querySelector("#userWeight").value = ""
-    document.querySelector("#userBodyfat").value = ""
+    userBodyfatInput.value = ""
+    userWeightInput.value = ""
+    userBodyfatInput.value = ""
 }
 // get input values of the users goals and saves them in local storage
 var saveUserGoals = function() {
-    var userWeightGoal = document.querySelector("#weightGoal").value
-    var userBodyfatGoal = document.querySelector("#bodyfatGoal").value
+    var userWeightGoal = userWeightGoalInput.value
+    var userBodyfatGoal = userBodyfatGoalInput.value
 
     userGoals.weightGoal = userWeightGoal
     userGoals.bodyfatGoal = userBodyfatGoal
 
     localStorage.setItem("userGoals", JSON.stringify(userGoals));
 
-    document.querySelector("#weightGoal").value = ""
-    document.querySelector("#bodyfatGoal").value = ""
+    userWeightGoalInput.value = ""
+    userBodyfatGoalInput.value = ""
 }
 // Loads the users info
 var loadUserCurrent = function() {
@@ -87,6 +87,7 @@ var getCityLatLon = function(cityName) {
         alert("Enter a City Name")
     }
 }
+
 // calls the api to weather data for current and forecast and saves the data in objects. Calls function to display the data
 var getWeatherData = function(lat, lon) {
     var apiLatLon = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&units=imperial&exclude=minutely,hourly,alerts&appid=7c0bd0cf3800dbf86808087317e3514f"
