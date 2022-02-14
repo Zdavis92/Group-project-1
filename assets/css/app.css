@@ -4,14 +4,13 @@
 }
 
 header {
-    padding: 20px 0px;
     background-color: #000000;
     display: flex;
     justify-content:space-evenly;
     flex-wrap: wrap;
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
+    width: 100%;
   }
 
   header h1 {
@@ -48,6 +47,7 @@ header {
     border-radius: 30px;
     border-color: #ffd700;
     border-style: double;
+    display: flex;
   }
 
   header nav ul li a:hover {
@@ -71,7 +71,17 @@ header {
   border-radius: 100px;
   height: 50px;
   width: 50px;
+  margin-top: 20px;
   justify-content: left;
+  flex-direction: row;
+  display: flex;
+}
+
+.chariot {
+  justify-content: left;
+  flex-direction: row;
+  display: flex;
+  margin-top: 20px;
 }
 
 .body {
@@ -89,7 +99,6 @@ header {
     background-image: url(https://www.muscleandfitness.com/wp-content/uploads/2019/07/Hands-Clapping-Chaulk-Kettlebell.jpg?quality=86&strip=all);
     padding: 60px;
     background-size: cover;
-    background-position: center;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -247,21 +256,6 @@ header {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     border-radius: 20px;
 }
-
-.bmi h6 {
-    border: 3px solid black;
-    background: rgba(255, 255, 255, 0.5);
-    font-size: 20px;
-    margin: 30px;
-    text-align: right;
-    padding-top: 16px;
-    padding-bottom: 16px;
-    padding-left: 8px;
-    padding-right: 8px;
-    text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    border-radius: 20px;
-}
 /* End of Stats & BMI */
 
 /* Start of API 1 */
@@ -299,6 +293,10 @@ header {
     width: auto;
 }
 
+.tabsTitle {
+  border-radius: 14px;
+}
+
 #trainerScroll {
     background-color: #333;
     overflow: auto;
@@ -319,6 +317,7 @@ header {
     background-color: lightpink;
     margin: 10px;
     height: 500px;
+    text-align: center;
 }
 
 .nutritionOne h1 {
@@ -399,3 +398,407 @@ footer {
     text-decoration: none;
     font-size: larger;
   }
+
+  /* End of Footer */
+
+  /* Start of Schedule */
+  .scheduleMain {
+    border: 5px solid #333;
+    background-image: url(https://wallpaperaccess.com/full/834264.jpg);
+  }
+
+ .scheduleBody {
+  text-align: center;
+  border: 5px solid #000000;
+  background-color:rgba(255, 255, 255, 0.9);
+  border-radius: 50px;
+  margin: 10px;
+  }
+
+@media screen and (min-width: 0px) {
+  .bmi h2 {
+    font-size: 5px;
+  }
+  .bmi p {
+    font-size: 6.2px;
+    margin: 7px;
+  }
+  .hero-form h3 {
+    font-size: 20px;
+  }
+  .hero-form p {
+    font-size: 15px;
+  }
+  .hero-cta p {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 320px) {
+  .bmi h2 {
+    font-size: 5px;
+  }
+  .bmi p {
+    font-size: 8px;
+    margin: 7px;
+  }
+  .hero-form h3 {
+    font-size: 20px;
+  }
+  .hero-form p {
+    font-size: 15px;
+  }
+  .hero-cta p {
+    font-size: 12px;
+  }
+  .chariot {
+    font-size: 25px;
+  }
+}
+@media screen and (min-width: 330px) {
+  .bmi h2 {
+    font-size: 6px;
+  }
+  .bmi p {
+    font-size: 8.5px;
+    margin: 7px;
+  }
+}
+@media screen and (max-width: 352px) {
+  .statVideo {
+    max-width: 100%;
+    height: auto;
+  }
+  .statsTest h2 {
+    font-size: 10px;
+  }
+  .statsTest p {
+    font-size: 7px;
+  }
+  .hero-form {
+    width: auto;
+    height: auto;
+  }
+  .btnStat {
+    font-size: 10px;
+  }
+  .hero-cta h2 {
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+  .bmi {
+    padding: 10px;
+  }
+  header nav ul li a {
+    padding: 5px 25px;
+    margin: 3px;
+  }
+  header nav ul {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 384px) and (min-width: 353px) {
+  .statVideo {
+    max-width: 100%;
+    height: auto;
+  }
+  .statsTest h2 {
+    font-size: 15px;
+  }
+  .statsTest p {
+    font-size: 10px;
+  }
+  .hero-form {
+    width: auto;
+    height: auto;
+  }
+  .btnStat {
+    font-size: 10px;
+  }
+  .hero-cta h2 {
+    font-size: 40px;
+    margin-bottom: 50px;
+  }
+  .bmi {
+    padding: 10px;
+  }
+  header nav ul li a {
+    padding: 7px 30px;
+    margin: 5px;
+  }
+  header nav ul {
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 371px) {
+  .bmi h2 {
+    font-size: 8px;
+  }
+  .bmi p {
+    font-size: 8.5px;
+    margin: 9px;
+  }
+  .hero-cta p {
+    font-size: 16px;
+  }
+  .chariot {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 488px) and (min-width: 384px) {
+  .statVideo {
+    max-width: 100%;
+    height: auto;
+  }
+  .statsTest h2 {
+    font-size: 20px;
+  }
+  .statsTest p {
+    font-size: 15px;
+  }
+  .hero-form {
+    width: auto;
+    height: auto;
+  }
+  .hero-cta h2 {
+    font-size: 40px;
+    margin-bottom: 50px;
+  }
+  .bmi h2 {
+    font-size: 8px;
+  }
+  .bmi p {
+    font-size: 9.5px;
+    margin: 9px;
+  }
+  .bmi {
+    padding: 10px;
+  }
+  header nav ul li a {
+    padding: 7px 20px;
+    margin: 2px;
+  }
+  header nav ul {
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 418px) {
+  .bmi p {
+    font-size: 10.5px;
+    margin: 9px;
+  }
+}
+@media screen and (min-width: 488px) {
+  .bmi h2 {
+    font-size: 9px;
+  }
+  .bmi p {
+    font-size: 11px;
+    margin: 11px;
+  }
+  .hero-form h3 {
+    font-size: 25px;
+  }
+  .hero-form p {
+    font-size: 20px;
+  }
+  .hero-cta h2 {
+    font-size: 50px;
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 639px) and (min-width: 488px) {
+  .statVideo {
+    max-width: 100%;
+    height: auto;
+  }
+  .statsTest h2 {
+    font-size: 25px;
+  }
+  .statsTest p {
+    font-size: 20px;
+  }
+  .hero-form {
+    width: auto;
+    height: auto;
+  }
+  header nav ul li a {
+    padding: 7px 25px;
+    margin: 2px;
+  }
+  header nav ul {
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 640px) {
+  .bmi h2 {
+    font-size: 12px;
+  }
+  .bmi p {
+    font-size: 13px;
+    margin: 13px;
+  }
+  .hero-form h3 {
+    font-size: 30px;
+  }
+  .hero-form p {
+    font-size: 25px;
+  }
+  .hero-cta p {
+    font-size: 20px;
+  }
+  .chariot {
+    font-size: 40px;
+  }
+}
+@media screen and (min-width: 686px) {
+  .bmi h2 {
+    font-size: 15px;
+  }
+  .bmi p {
+    font-size: 14px;
+    margin: 15px;
+  }
+}
+@media screen and (max-width: 874px) and (min-width: 640px) {
+  .statVideo {
+    max-width: fit-content;
+    height: auto;
+  }
+  .statsTest h2 {
+    font-size: 30px;
+  }
+  .statsTest p {
+    font-size: 20px;
+  }
+  .hero-form {
+    width: auto;
+    height: auto;
+  }
+  header nav ul li a {
+    padding: 8px 35px;
+    margin: 3px;
+  }
+  header nav ul {
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 843px) {
+  .bmi h2 {
+    font-size: 21px;
+  }
+  .bmi p {
+    font-size: 16px;
+    margin: 16px;
+  }
+  .statVideo {
+    width: 90%;
+    height: 40%;
+  }
+  .hero-cta h2 {
+    font-size: 40px;
+    margin-bottom: 50px;
+  }
+  .hero-cta h2 {
+    font-size: 60px;
+    margin-bottom: 50px;
+  }
+  .hero-cta p {
+    font-size: 30px;
+  }
+  .chariot {
+    font-size: 50px;
+  }
+}
+@media screen and (min-width: 887px) {
+  .bmi h2 {
+    font-size: 23px;
+  }
+  .bmi p {
+    font-size: 17px;
+    margin: 17px;
+  }
+}
+@media screen and (max-width: 911px) and (min-width: 875px) {
+  header nav ul li a {
+    padding: 10px 50px;
+    margin: 5px;
+  }
+  header nav ul {
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1058px) {
+  .bmi h2 {
+    font-size: 29px;
+}
+.bmi p {
+    font-size: 18px;
+    margin: 18px;
+  }
+  .hero-form h3 {
+    font-size: 35px;
+  }
+  .hero-form p {
+    font-size: 30px;
+  }
+}
+@media screen and (min-width: 1169px) {
+  .bmi h2 {
+    font-size: 29px;
+}
+.bmi p {
+    font-size: 19px;
+    margin: 18px;
+  }
+  .hero-cta h2 {
+    font-size: 70px;
+    margin-bottom: 50px;
+  }
+  .hero-cta p {
+    font-size: 35px;
+  }
+}
+@media screen and (min-width: 1217px) {
+.bmi h2 {
+    font-size: 30px;
+}
+.bmi p {
+    font-size: 19.5px;
+    margin: 20px;
+  }
+}
+@media screen and (min-width: 1361px) {
+  .bmi h2 {
+    font-size: 33px;
+}
+.bmi p {
+    font-size: 21px;
+    margin: 20px;
+  }
+}
+@media screen and (min-width: 1416px) {
+  .bmi h2 {
+    font-size: 33px;
+}
+.bmi p {
+    font-size: 21.5px;
+    margin: 19px;
+  }
+  .hero-form h3 {
+    font-size: 40px;
+  }
+  .hero-form p {
+    font-size: 35px;
+  }
+  .hero-cta h2 {
+    font-size: 40px;
+    margin-bottom: 50px;
+  }
+  .hero-cta h2 {
+    font-size: 80px;
+    margin-bottom: 50px;
+  }
+  .hero-cta p {
+    font-size: 40px;
+  }
+}

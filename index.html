@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Group-project-1</title>
+  <title>Chariot Fitness</title>
   <link rel="stylesheet" href="./assets/css/app.css">
   <link rel="stylesheet" href="./assets/css/foundation.css">
   <link rel="stylesheet" href="./assets/css/foundation.min.css">
@@ -15,7 +15,7 @@
   <header>
     <img src="Logo1+.png" class="logo">
     <h1>
-      <a href="">CHARIOT</a>
+      <a href="" class="chariot">CHARIOT</a>
     </h1>
     <nav>
       <ul>
@@ -23,7 +23,7 @@
           <a href="#bmi">BMI</a>
         </li>
         <li>
-          <a href="#schedule">Schedule</a>
+          <a href="./schedule.html">Schedule</a>
         </li>
         <li>
           <a href="#introduction">Introduction</a>
@@ -82,8 +82,8 @@
       <div class="statsTest" id="schedule">
         <h2> Start a Scheduale!</h2>
         <p> Help Track Your Progress Today!</p>
-        <iframe width="460" height="260" src="https://www.youtube.com/embed/5iHQDUvR_vc" title="YouTube video player"
-          frameborder="0"
+        <iframe class="statVideo" width="460" height="260" src="https://www.youtube.com/embed/5iHQDUvR_vc"
+          title="YouTube video player" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen></iframe>
         <button type="submit" class="btnStat">
@@ -92,23 +92,26 @@
       </div>
       <div class="bmi" id="bmi">
         <h2>What is a Body Mass Index? (BMI)</h2>
-        <p> The body mass index (BMI) is a measure that uses your height and weight to work out if your weight is healthy.</p>
-        <h6>BMI takes into account natural variations in body shape, giving a healthy weight range for a particular height.</h6>
-        <p> Muscle is much denser than fat, so very muscular people, such as heavyweight boxers, weight trainers and athletes, may be a healthy weight even though their BMI is classed as obese.</p>
+        <p> The body mass index (BMI) is a measure that uses your height and weight to work out if your weight is
+          healthy.</p>
+        <p>BMI takes into account natural variations in body shape, giving a healthy weight range for a particular
+          height.</p>
+        <p> Muscle is much denser than fat, so very muscular people, such as heavyweight boxers, weight trainers and
+          athletes, may be a healthy weight even though their BMI is classed as obese.</p>
       </div>
     </section>
   </section>
 
-      <section>
-        <section>
-          <div class="introduction">
-            <h1>Enter Your Current City</h1>
-              <input type="text" id="currentCity">
-              <button id="checkWeather">Check the weather</button>
-              <div id="currentWeather"></div>
-          </div>
-        </section>
-      </section>
+  <section>
+    <section>
+      <div class="introduction">
+        <h1>Enter Your Current City</h1>
+        <input type="text" id="currentCity">
+        <button id="checkWeather">Check the weather</button>
+        <div id="currentWeather"></div>
+      </div>
+    </section>
+  </section>
 
   <section>
     <section>
@@ -116,7 +119,8 @@
         <h1> Virtual Trainers </h1>
         <section id="trainerScroll">
           <div class="trainerImages">
-            <img src="CoachOne.jpg" width="280" height="280" class="tabsTitle is-active" href="#panel1" aria-selected="true">
+            <img src="CoachOne.jpg" width="280" height="280" class="tabsTitle is-active" href="#panel1"
+              aria-selected="true">
             <img src="CoachTwo.jpg" width="280" height="280" class="tabsTitle" href="#panel2">
             <img src="CoachThree.jpg" width="210" height="210" class="tabsTitle" href="#panel3">
             <img src="CoachFour.jpg" width="250" height="250" class="tabsTitle" href="#panel4">
@@ -125,16 +129,6 @@
             <img src="CoachSeven.jpg" width="280" height="280" class="tabsTitle" href="#panel7">
           </div>
         </section>
-        <!-- <div>
-          <ul class="tabs" data-tabs id="example-tabs">
-            <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Tab 1</a></li>
-            <li class="tabs-title"><a href="#panel2">Tab 2</a></li>
-            <li class="tabs-title"><a href="#panel3">Tab 3</a></li>
-            <li class="tabs-title"><a href="#panel4">Tab 4</a></li>
-            <li class="tabs-title"><a href="#panel5">Tab 5</a></li>
-            <li class="tabs-title"><a href="#panel6">Tab 6</a></li>
-          </ul>
-        </div> -->
       </div>
     </section>
   </section>
@@ -148,50 +142,37 @@
           <h4>Enter a Food Item for it's nutritional information</h4>
           <input id="food">
           <button id="search" type="submit">search</button>
-      </form>
+        </form>
       </div>
     </section>
-  <!-- <h3 class="trackHeader">Save your stats to help track your progress</h3>
-    <p>What it your Name?</p>
-    <input type="text" id="userName">
-    <p>What is your current weight?</p>
-    <input type="text" id="userWeight">
-    <p>What is your current bodyfat %?</p>
-    <input type="text" id="userBodyfat">
-    <button id="saveCurrent" class="Btn">Save</button>
-    <h3>Set your goals</h3>
-    <p>What is your weight goal?</p>
-    <input type="text" id="weightGoal">
-    <p>What is your bodyfat % goal?</p>
-    <input type="text" id="bodyfatGoal">
-    <button id="saveGoals" class="Btn">Set your goals</button> -->
 
-  <footer>
-    <h1>
-      <img src="Logo1+.png" class="logo">
-      <a href="">CHARIOT</a>
-    </h1>
-    <nav>
-      <ul>
-        <li>
-          <a href="#policy">Private Policy</a>
-        </li>
-        <li>
-          <a href="#terms">Terms of Use</a>
-        </li>
-        <li>
-          <a href="#service">Customer Service</a>
-        </li>
-      </ul>
-    </nav>
-    <div>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <a href="https://facebook.com" class="fa fa-facebook"></a>
-      <a href="https://twitter.com" class="fa fa-twitter"></a>
-      <a href="https://instagram.com" class="fa fa-instagram"></a>
-      <a href="https://youtube.com" class="fa fa-youtube"></a>
-    </div>
-  </footer>
+    <footer>
+      <h1>
+        <img src="Logo1+.png" class="logo">
+        <a href="">CHARIOT</a>
+      </h1>
+      <nav>
+        <ul>
+          <li>
+            <a href="#policy">Private Policy</a>
+          </li>
+          <li>
+            <a href="#terms">Terms of Use</a>
+          </li>
+          <li>
+            <a href="#service">Customer Service</a>
+          </li>
+        </ul>
+      </nav>
+      <div>
+        <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <a href="https://facebook.com" class="fa fa-facebook"></a>
+        <a href="https://twitter.com" class="fa fa-twitter"></a>
+        <a href="https://instagram.com" class="fa fa-instagram"></a>
+        <a href="https://youtube.com" class="fa fa-youtube"></a>
+      </div>
+    </footer>
 
     <script src="./assets/js/vendor/foundation.js"></script>
     <script src="./assets/js/vendor/foundation.min.js"></script>
