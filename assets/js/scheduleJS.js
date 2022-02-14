@@ -1,3 +1,4 @@
+// Setting variables to get HTML elements.
 var bodyEl = document.querySelector("#body")
 var preset1El = document.querySelector("#preset1");
 var preset2El = document.querySelector("#preset2");
@@ -10,6 +11,7 @@ var wednesdayEl = document.querySelector("#wednesday");
 var thursdayEl = document.querySelector("#thursday");
 var fridayEl = document.querySelector("#friday");
 var saturdayEl = document.querySelector("#saturday");
+// JS object to store info to local storage.
 var savedSchedule = {
     sunday: "",
     monday: "",
@@ -18,8 +20,8 @@ var savedSchedule = {
     thursday: "",
     friday: "",
     saturday: "",
-}
-
+} 
+// This function get the input values of the user and sets them to the js object. Then saves it to local storage.
 var saveSchedule = function() {
 
     savedSchedule.sunday = sundayEl.value
@@ -38,6 +40,7 @@ var saveSchedule = function() {
     saveScheduleEl.textContent = "Update Schedule"
 }
 
+// This function checks for a saved schedule and adds it to the input fields if one is found.
 var loadSchedule = function() {
     savedSchedule = JSON.parse(localStorage.getItem("schedule"));
     if (!savedSchedule) {
@@ -63,6 +66,7 @@ var loadSchedule = function() {
     }
 }
 
+// When called this function populates the input fields with a push, pull, legs workout schedule.
 var preset1 = function () {
     sundayEl.value = "Bench Press, Overhead Press, Triceps Dips"
     mondayEl.value = "Rows, Lat Pulldowns, Barbell Curls"
@@ -73,6 +77,7 @@ var preset1 = function () {
     saturdayEl.value = "Leg Press, Leg Extensions, Leg Curls"
 }
 
+// When called this function populates the input fields with a upper, lower workout schedule.
 var preset2 = function () {
     sundayEl.value = "Rest"
     mondayEl.value = "Bench Press, Rows, Triceps Dips"
@@ -83,6 +88,7 @@ var preset2 = function () {
     saturdayEl.value = "Rest"
 }
 
+// When called this function populates the input fields with a fullbody workout schedule.
 var preset3 = function () {
     sundayEl.value = "Rest"
     mondayEl.value = "Bench Press, Squats, Rows"
@@ -93,6 +99,7 @@ var preset3 = function () {
     saturdayEl.value = "Rest"
 }
 
+ // calls the load function to add any saved data when the page loads up
 loadSchedule();
 saveScheduleEl.addEventListener("click", saveSchedule)
 preset1El.addEventListener("click", preset1)
